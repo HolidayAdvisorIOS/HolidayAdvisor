@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DB2F2391E8FE9430047D458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2F2381E8FE9430047D458 /* AppDelegate.swift */; };
+		3DB2F23B1E8FE9430047D458 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2F23A1E8FE9430047D458 /* HomeViewController.swift */; };
+		3DB2F23E1E8FE9430047D458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB2F23C1E8FE9430047D458 /* Main.storyboard */; };
+		3DB2F2401E8FE9430047D458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DB2F23F1E8FE9430047D458 /* Assets.xcassets */; };
+		3DB2F2431E8FE9430047D458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB2F2411E8FE9430047D458 /* LaunchScreen.storyboard */; };
+		68976D8142D0700034719272 /* Pods_HolidayAdvisor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E7ACA8353C3DF54A2680CE /* Pods_HolidayAdvisor.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3DB2F2351E8FE9430047D458 /* HolidayAdvisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayAdvisor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB2F2381E8FE9430047D458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DB2F23A1E8FE9430047D458 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3DB2F23D1E8FE9430047D458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DB2F23F1E8FE9430047D458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DB2F2421E8FE9430047D458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3DB2F2441E8FE9430047D458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63E7ACA8353C3DF54A2680CE /* Pods_HolidayAdvisor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HolidayAdvisor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D6C9EA5E13D7A0F54F22B4B /* Pods-HolidayAdvisor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayAdvisor.release.xcconfig"; path = "Pods/Target Support Files/Pods-HolidayAdvisor/Pods-HolidayAdvisor.release.xcconfig"; sourceTree = "<group>"; };
+		A54FA8A5E309BA6F659AC4E3 /* Pods-HolidayAdvisor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayAdvisor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HolidayAdvisor/Pods-HolidayAdvisor.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DB2F2321E8FE9430047D458 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68976D8142D0700034719272 /* Pods_HolidayAdvisor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DB2F22C1E8FE9430047D458 = {
+			isa = PBXGroup;
+			children = (
+				3DB2F2371E8FE9430047D458 /* HolidayAdvisor */,
+				3DB2F2361E8FE9430047D458 /* Products */,
+				7CC5E8A47EC5740A183594A3 /* Pods */,
+				F96F2AF5CEBFF31AC1F12EDF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3DB2F2361E8FE9430047D458 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DB2F2351E8FE9430047D458 /* HolidayAdvisor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DB2F2371E8FE9430047D458 /* HolidayAdvisor */ = {
+			isa = PBXGroup;
+			children = (
+				3DB2F2381E8FE9430047D458 /* AppDelegate.swift */,
+				3DEAAEFF1E8FF0C400082649 /* ViewControllers */,
+				3DB2F23C1E8FE9430047D458 /* Main.storyboard */,
+				3DB2F23F1E8FE9430047D458 /* Assets.xcassets */,
+				3DB2F2411E8FE9430047D458 /* LaunchScreen.storyboard */,
+				3DB2F2441E8FE9430047D458 /* Info.plist */,
+			);
+			path = HolidayAdvisor;
+			sourceTree = "<group>";
+		};
+		3DEAAEFF1E8FF0C400082649 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3DB2F23A1E8FE9430047D458 /* HomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7CC5E8A47EC5740A183594A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A54FA8A5E309BA6F659AC4E3 /* Pods-HolidayAdvisor.debug.xcconfig */,
+				6D6C9EA5E13D7A0F54F22B4B /* Pods-HolidayAdvisor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F96F2AF5CEBFF31AC1F12EDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63E7ACA8353C3DF54A2680CE /* Pods_HolidayAdvisor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DB2F2341E8FE9430047D458 /* HolidayAdvisor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DB2F2471E8FE9430047D458 /* Build configuration list for PBXNativeTarget "HolidayAdvisor" */;
+			buildPhases = (
+				DEA2B401F19664C70892E83A /* [CP] Check Pods Manifest.lock */,
+				3DB2F2311E8FE9430047D458 /* Sources */,
+				3DB2F2321E8FE9430047D458 /* Frameworks */,
+				3DB2F2331E8FE9430047D458 /* Resources */,
+				17B9C1705940471CE304FCC7 /* [CP] Embed Pods Frameworks */,
+				7BE6EB1A67442CBDC8691598 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HolidayAdvisor;
+			productName = HolidayAdvisor;
+			productReference = 3DB2F2351E8FE9430047D458 /* HolidayAdvisor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DB2F22D1E8FE9430047D458 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Iliyan Gogov";
+				TargetAttributes = {
+					3DB2F2341E8FE9430047D458 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3DB2F2301E8FE9430047D458 /* Build configuration list for PBXProject "HolidayAdvisor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DB2F22C1E8FE9430047D458;
+			productRefGroup = 3DB2F2361E8FE9430047D458 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DB2F2341E8FE9430047D458 /* HolidayAdvisor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DB2F2331E8FE9430047D458 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB2F2431E8FE9430047D458 /* LaunchScreen.storyboard in Resources */,
+				3DB2F2401E8FE9430047D458 /* Assets.xcassets in Resources */,
+				3DB2F23E1E8FE9430047D458 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17B9C1705940471CE304FCC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HolidayAdvisor/Pods-HolidayAdvisor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BE6EB1A67442CBDC8691598 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HolidayAdvisor/Pods-HolidayAdvisor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEA2B401F19664C70892E83A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DB2F2311E8FE9430047D458 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB2F23B1E8FE9430047D458 /* HomeViewController.swift in Sources */,
+				3DB2F2391E8FE9430047D458 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3DB2F23C1E8FE9430047D458 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DB2F23D1E8FE9430047D458 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3DB2F2411E8FE9430047D458 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DB2F2421E8FE9430047D458 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DB2F2451E8FE9430047D458 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DB2F2461E8FE9430047D458 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DB2F2481E8FE9430047D458 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54FA8A5E309BA6F659AC4E3 /* Pods-HolidayAdvisor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HolidayAdvisor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IG.HolidayAdvisor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3DB2F2491E8FE9430047D458 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D6C9EA5E13D7A0F54F22B4B /* Pods-HolidayAdvisor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HolidayAdvisor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IG.HolidayAdvisor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DB2F2301E8FE9430047D458 /* Build configuration list for PBXProject "HolidayAdvisor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB2F2451E8FE9430047D458 /* Debug */,
+				3DB2F2461E8FE9430047D458 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DB2F2471E8FE9430047D458 /* Build configuration list for PBXNativeTarget "HolidayAdvisor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB2F2481E8FE9430047D458 /* Debug */,
+				3DB2F2491E8FE9430047D458 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DB2F22D1E8FE9430047D458 /* Project object */;
+}
