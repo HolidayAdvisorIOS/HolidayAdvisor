@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class HomeViewController: UIViewController {
 
@@ -20,20 +21,14 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let request = NSMutableURLRequest(url: self.url)
-        request.httpMethod = "GET"
-        let session = URLSession.shared.dataTask(with: request as URLRequest){(data, response, error) in
-            do{
-                let jsonData =  try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-//                self.placesLabel.text = String(describing: jsonData)
-                print(jsonData)
-                
-            }catch{
-                
-            }
-        }
-        
-        session.resume()
+//        let request = NSMutableURLRequest(url: self.url)
+//        request.httpMethod = "GET"
+//        let session = URLSession.shared.dataTask(with: request as URLRequest){(data, response, error) in
+//                let jsonData =  JSON(data: data!)
+////                self.placesLabel.text = String(describing: jsonData)
+//                print(jsonData)
+//        }
+//        session.resume()
     }
 
     override func didReceiveMemoryWarning() {

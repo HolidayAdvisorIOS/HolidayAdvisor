@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D433D9A1E90D70100992715 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D433D991E90D70100992715 /* HttpRequester.swift */; };
+		3D433D9C1E90D74D00992715 /* HttpRequesterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D433D9B1E90D74D00992715 /* HttpRequesterDelegate.swift */; };
+		3D433D9F1E90DAB600992715 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D433D9E1E90DAB600992715 /* Place.swift */; };
+		3D433DA11E90DD0D00992715 /* DictPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D433DA01E90DD0D00992715 /* DictPlace.swift */; };
 		3DB2F2391E8FE9430047D458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2F2381E8FE9430047D458 /* AppDelegate.swift */; };
 		3DB2F23B1E8FE9430047D458 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2F23A1E8FE9430047D458 /* HomeViewController.swift */; };
 		3DB2F23E1E8FE9430047D458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB2F23C1E8FE9430047D458 /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D433D991E90D70100992715 /* HttpRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequester.swift; sourceTree = "<group>"; };
+		3D433D9B1E90D74D00992715 /* HttpRequesterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequesterDelegate.swift; sourceTree = "<group>"; };
+		3D433D9E1E90DAB600992715 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		3D433DA01E90DD0D00992715 /* DictPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictPlace.swift; sourceTree = "<group>"; };
 		3DB2F2351E8FE9430047D458 /* HolidayAdvisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayAdvisor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB2F2381E8FE9430047D458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DB2F23A1E8FE9430047D458 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +48,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D433D981E90D6CF00992715 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3D433D991E90D70100992715 /* HttpRequester.swift */,
+				3D433D9B1E90D74D00992715 /* HttpRequesterDelegate.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3D433D9D1E90DA9800992715 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D433D9E1E90DAB600992715 /* Place.swift */,
+				3D433DA01E90DD0D00992715 /* DictPlace.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		3DB2F22C1E8FE9430047D458 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +87,8 @@
 		3DB2F2371E8FE9430047D458 /* HolidayAdvisor */ = {
 			isa = PBXGroup;
 			children = (
+				3D433D9D1E90DA9800992715 /* Models */,
+				3D433D981E90D6CF00992715 /* Utils */,
 				3DB2F2381E8FE9430047D458 /* AppDelegate.swift */,
 				3DEAAEFF1E8FF0C400082649 /* ViewControllers */,
 				3DB2F23C1E8FE9430047D458 /* Main.storyboard */,
@@ -220,7 +248,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DB2F23B1E8FE9430047D458 /* HomeViewController.swift in Sources */,
+				3D433D9C1E90D74D00992715 /* HttpRequesterDelegate.swift in Sources */,
+				3D433D9A1E90D70100992715 /* HttpRequester.swift in Sources */,
+				3D433DA11E90DD0D00992715 /* DictPlace.swift in Sources */,
 				3DB2F2391E8FE9430047D458 /* AppDelegate.swift in Sources */,
+				3D433D9F1E90DAB600992715 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

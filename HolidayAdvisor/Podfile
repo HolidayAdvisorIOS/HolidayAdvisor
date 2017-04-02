@@ -6,5 +6,5 @@ target 'HolidayAdvisor' do
   use_frameworks!
 
   # Pods for HolidayAdvisor
-
+  pod 'SwiftyJSON'
 end
