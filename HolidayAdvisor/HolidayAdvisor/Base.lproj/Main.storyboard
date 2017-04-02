@@ -1,43 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GkK-gW-itp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="9Rc-dA-tvr">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="HolidayAdvisor" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="B4a-SK-HdU" customClass="HomeViewController" customModule="HolidayAdvisor" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="99" sectionHeaderHeight="18" sectionFooterHeight="18" id="N6S-0A-quz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.09495418518781662" green="0.5908387303352356" blue="0.58859843015670776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceTableViewCell" rowHeight="99" id="ht2-Zp-o8U" customClass="PlaceTableViewCell" customModule="HolidayAdvisor">
+                                <rect key="frame" x="0.0" y="56" width="375" height="99"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ht2-Zp-o8U" id="bf8-IL-r7I">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RXd-tB-B3s">
+                                            <rect key="frame" x="250" y="0.0" width="125" height="99"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="125" id="AGp-5M-bAX"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foO-YI-dEd">
+                                            <rect key="frame" x="10" y="8" width="232" height="82.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="RXd-tB-B3s" secondAttribute="bottom" id="0xl-qv-fxZ"/>
+                                        <constraint firstItem="foO-YI-dEd" firstAttribute="leading" secondItem="bf8-IL-r7I" secondAttribute="leadingMargin" constant="10" id="CFy-pa-ah1"/>
+                                        <constraint firstItem="foO-YI-dEd" firstAttribute="centerY" secondItem="bf8-IL-r7I" secondAttribute="centerY" id="OlJ-j2-Mw8"/>
+                                        <constraint firstItem="foO-YI-dEd" firstAttribute="top" secondItem="bf8-IL-r7I" secondAttribute="topMargin" id="SGX-z1-UEd"/>
+                                        <constraint firstItem="RXd-tB-B3s" firstAttribute="leading" secondItem="foO-YI-dEd" secondAttribute="trailing" id="WfF-KE-OK2"/>
+                                        <constraint firstAttribute="trailing" secondItem="RXd-tB-B3s" secondAttribute="trailing" id="hlI-gW-tbR"/>
+                                        <constraint firstAttribute="bottom" secondItem="RXd-tB-B3s" secondAttribute="bottom" id="i8s-X2-oCH"/>
+                                        <constraint firstItem="RXd-tB-B3s" firstAttribute="leading" secondItem="foO-YI-dEd" secondAttribute="trailing" id="l39-MW-8f3"/>
+                                        <constraint firstItem="RXd-tB-B3s" firstAttribute="top" secondItem="bf8-IL-r7I" secondAttribute="top" id="uIE-at-AWE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="foO-YI-dEd" secondAttribute="bottom" id="wqr-jo-J5j"/>
+                                    </constraints>
+                                    <variation key="heightClass=compact-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="RXd-tB-B3s"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.09495418518781662" green="0.5908387303352356" blue="0.58859843015670776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="placeImageView" destination="RXd-tB-B3s" id="MZW-wV-Fy5"/>
+                                    <outlet property="placeNameLabel" destination="foO-YI-dEd" id="9fJ-MJ-F0m"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdf-s1-3Z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2429.5999999999999" y="89.505247376311857"/>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="fKH-GE-QS9">
+            <objects>
+                <viewController id="GkK-gW-itp" customClass="StartViewController" customModule="HolidayAdvisor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Vki-Nb-uwN"/>
+                        <viewControllerLayoutGuide type="bottom" id="hkL-dO-j7w"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="XXP-kF-eML">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3I-He-nVP">
-                                <rect key="frame" x="46" y="49" width="303" height="115"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="holidayLogo" translatesAutoresizingMaskIntoConstraints="NO" id="2eF-0Z-65O">
+                                <rect key="frame" x="67" y="117" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9A-BM-pyp">
+                                <rect key="frame" x="67" y="376" width="247" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.14859193563461304" green="0.77795606851577759" blue="0.079356484115123749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="See all places">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="placesButtonClick:" destination="GkK-gW-itp" eventType="touchUpInside" id="sWO-gO-cGI"/>
+                                    <segue destination="B4a-SK-HdU" kind="show" id="KfL-ez-kf0"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.09495418518781662" green="0.5908387303352356" blue="0.58859843015670776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <connections>
-                        <outlet property="placesLabel" destination="E3I-He-nVP" id="YSH-qZ-eUq"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lu5-6s-PnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="101.19940029985008"/>
+            <point key="canvasLocation" x="594" y="90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="holidayLogo" width="320" height="185"/>
+    </resources>
 </document>

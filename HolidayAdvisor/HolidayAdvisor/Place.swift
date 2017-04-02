@@ -14,9 +14,9 @@ class Place {
     var info: String?
     var imageUrl: String?
     
-//    convenience init(withName name: String, imageUrl: String?, andInfo info: String?){
-//        self.init(withId: "", name: name, andInfo: info)
-//    }
+    convenience init(withName name: String, imageUrl: String?, andInfo info: String?){
+        self.init(withId: "", name: name,imageUrl: "", andInfo: info)
+    }
     
     init(withId id: String, name: String, imageUrl: String?, andInfo info: String?){
         self._id = id

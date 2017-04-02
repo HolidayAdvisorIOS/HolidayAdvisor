@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var baseURL: String = "https://holiday-advisor.herokuapp.com/api"
+    var baseUrl: String = "https://holiday-advisor.herokuapp.com/api"
     var http: HttpRequester?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

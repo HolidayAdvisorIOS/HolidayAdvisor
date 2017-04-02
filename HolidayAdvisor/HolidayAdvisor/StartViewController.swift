@@ -6,4 +6,19 @@
 //  Copyright © 2017 Iliyan Gogov. All rights reserved.
 //
 
+import UIKit
 import Foundation
+
+class StartViewController : UIViewController {
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    @IBAction func placesButtonClick(_ sender: Any) {
+        
+    }
+}
+
