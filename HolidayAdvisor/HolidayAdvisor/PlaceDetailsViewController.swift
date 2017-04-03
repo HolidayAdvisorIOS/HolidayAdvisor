@@ -12,19 +12,27 @@ class PlaceDetailsViewController: UIViewController {
 
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var placeNameLabel: UILabel!
+    @IBOutlet weak var placeInfoLabel: UILabel!
+    @IBOutlet weak var placeOwnerLabel: UILabel!
     
     var name : String? = ""
-    var imageUrl: String=""
+    var imageUrl: String? = ""
+    var info: String? = ""
+    var owner: String? = ""
+    var rating: Int? = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.placeNameLabel.text = self.name
-                if let url = NSURL(string: self.imageUrl) {
-                    if let data = NSData(contentsOf: url as URL) {
-                        self.placeImage?.image = UIImage(data: data as Data)
-                    }
-                }
+        self.placeOwnerLabel.text = self.owner
+        self.placeInfoLabel.text = self.info
+        
+        if let url = NSURL(string: self.imageUrl!) {
+            if let data = NSData(contentsOf: url as URL) {
+                self.placeImage?.image = UIImage(data: data as Data)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

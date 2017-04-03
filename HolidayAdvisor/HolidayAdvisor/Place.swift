@@ -13,15 +13,19 @@ class Place {
     var name: String?
     var info: String?
     var imageUrl: String?
+    var owner: String?
+    var rating: Int?
     
     convenience init(withName name: String, imageUrl: String?, andInfo info: String?){
-        self.init(withId: "", name: name,imageUrl: "", andInfo: info)
+        self.init(withId: "", name: name,imageUrl: "", owner:"iPhoner", rating:0, andInfo: info)
     }
     
-    init(withId id: String, name: String, imageUrl: String?, andInfo info: String?){
+    init(withId id: String, name: String, imageUrl: String?, owner: String?, rating: Int?, andInfo info: String?){
         self._id = id
         self.name = name
         self.info = info
         self.imageUrl = imageUrl
+        self.owner = owner
+        self.rating = rating
     }
 }

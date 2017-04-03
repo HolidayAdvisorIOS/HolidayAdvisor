@@ -14,7 +14,9 @@ extension Place {
         let name = dict["name"] as! String
         let info = dict["info"] as? String
         let imageUrl = dict["img"] as! String
-        self.init(withId :id, name: name,imageUrl:imageUrl, andInfo: info)
+        let owner = dict["owner"] as? String
+        let rating = dict["rating"] as! Int
+        self.init(withId :id, name: name,imageUrl:imageUrl, owner:owner, rating:rating, andInfo: info)
     }
     
     static func fromDict(_ dict: Dictionary<String, Any>) -> Place {
@@ -25,7 +27,9 @@ extension Place {
         return [
             "name": self.name!,
             "info": self.info!,
-            "img": self.imageUrl!
+            "img": self.imageUrl!,
+            "owner": self.owner!,
+            "rating": self.rating!
         ]
     }
 }

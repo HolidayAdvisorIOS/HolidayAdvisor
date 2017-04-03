@@ -19,6 +19,7 @@
 		3DBF22EB1E90E790008795D0 /* AddPlaceModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF22EA1E90E790008795D0 /* AddPlaceModalViewController.swift */; };
 		3DBF22ED1E918634008795D0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF22EC1E918634008795D0 /* StartViewController.swift */; };
 		3DBF22F11E923FA8008795D0 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF22F01E923FA8008795D0 /* PlaceDetailsViewController.swift */; };
+		3DBF22F31E927849008795D0 /* CreatePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF22F21E927849008795D0 /* CreatePlaceViewController.swift */; };
 		68976D8142D0700034719272 /* Pods_HolidayAdvisor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E7ACA8353C3DF54A2680CE /* Pods_HolidayAdvisor.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		3DBF22EA1E90E790008795D0 /* AddPlaceModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceModalViewController.swift; sourceTree = "<group>"; };
 		3DBF22EC1E918634008795D0 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3DBF22F01E923FA8008795D0 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
+		3DBF22F21E927849008795D0 /* CreatePlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePlaceViewController.swift; sourceTree = "<group>"; };
 		63E7ACA8353C3DF54A2680CE /* Pods_HolidayAdvisor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HolidayAdvisor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6C9EA5E13D7A0F54F22B4B /* Pods-HolidayAdvisor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayAdvisor.release.xcconfig"; path = "Pods/Target Support Files/Pods-HolidayAdvisor/Pods-HolidayAdvisor.release.xcconfig"; sourceTree = "<group>"; };
 		A54FA8A5E309BA6F659AC4E3 /* Pods-HolidayAdvisor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayAdvisor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HolidayAdvisor/Pods-HolidayAdvisor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,13 +56,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D433D981E90D6CF00992715 /* Utils */ = {
+		3D433D981E90D6CF00992715 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				3D433D991E90D70100992715 /* HttpRequester.swift */,
 				3D433D9B1E90D74D00992715 /* HttpRequesterDelegate.swift */,
 			);
-			name = Utils;
+			name = Services;
 			sourceTree = "<group>";
 		};
 		3D433D9D1E90DA9800992715 /* Models */ = {
@@ -94,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				3D433D9D1E90DA9800992715 /* Models */,
-				3D433D981E90D6CF00992715 /* Utils */,
+				3D433D981E90D6CF00992715 /* Services */,
 				3DB2F2381E8FE9430047D458 /* AppDelegate.swift */,
 				3DEAAEFF1E8FF0C400082649 /* ViewControllers */,
 				3DB2F23C1E8FE9430047D458 /* Main.storyboard */,
@@ -120,6 +122,7 @@
 				3DB2F23A1E8FE9430047D458 /* HomeViewController.swift */,
 				3DBF22EC1E918634008795D0 /* StartViewController.swift */,
 				3DBF22F01E923FA8008795D0 /* PlaceDetailsViewController.swift */,
+				3DBF22F21E927849008795D0 /* CreatePlaceViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				3DBF22ED1E918634008795D0 /* StartViewController.swift in Sources */,
 				3D433D9C1E90D74D00992715 /* HttpRequesterDelegate.swift in Sources */,
 				3D433D9A1E90D70100992715 /* HttpRequester.swift in Sources */,
+				3DBF22F31E927849008795D0 /* CreatePlaceViewController.swift in Sources */,
 				3DBF22EB1E90E790008795D0 /* AddPlaceModalViewController.swift in Sources */,
 				3D433DA11E90DD0D00992715 /* DictPlace.swift in Sources */,
 				3DBF22F11E923FA8008795D0 /* PlaceDetailsViewController.swift in Sources */,

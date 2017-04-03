@@ -14,9 +14,6 @@ protocol AddPlaceModalDelegate {
 }
 
 class AddPlaceModalViewController: UIViewController, HttpRequesterDelegate {
-    @IBOutlet weak var textTitle: UITextField!
-    @IBOutlet weak var textDescription: UITextView!
-    
     var delegate: AddPlaceModalDelegate?
     
     var url: String {
@@ -47,13 +44,13 @@ class AddPlaceModalViewController: UIViewController, HttpRequesterDelegate {
     }
     
     @IBAction func save() {
-        let title = self.textTitle.text
-        let description = self.textDescription.text
+        //let title = self.textTitle.text
+        //let description = self.textDescription.text
         
-        let place = Place(withName: title!,imageUrl:"", andInfo: description!)
-        let placeDict = place.toDict()
+        //let place = Place(withName: title!,imageUrl:"", andInfo: description!)
+        //let placeDict = place.toDict()
         
-        self.http?.postJson(toUrl: self.url, withBody: placeDict)
+        //self.http?.postJson(toUrl: self.url, withBody: placeDict)
     }
     
     @IBAction func cancel() {

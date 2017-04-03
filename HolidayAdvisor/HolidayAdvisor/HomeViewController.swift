@@ -44,20 +44,25 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlace
         self.navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .add,
                             target: self,
-                            action: #selector(HomeViewController.showAddModal))
+                            action: #selector(self.createPlace))
         self.loadPlaces()
     }
     
-    func showAddModal(){
-        let nextVC = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "modal-add-place") as! AddPlaceModalViewController
-        
-        nextVC.delegate = self
-        
-//        self.customPresentViewController(self.presenter, viewController: nextVC, animated: true, completion: nil)
-        
-        // self.present(nextVC, animated: true, completion: nil)
+   func createPlace () {
+    let destination = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreatePlaceView") as! CreatePlaceViewController
+    self.show(destination, sender: self)
     }
+    
+//    func showAddModal(){
+//        let nextVC = UIStoryboard(name: "Main", bundle: nil)
+//            .instantiateViewController(withIdentifier: "modal-add-place") as! AddPlaceModalViewController
+//        
+//        nextVC.delegate = self
+//        
+////        self.customPresentViewController(self.presenter, viewController: nextVC, animated: true, completion: nil)
+//        
+//        // self.present(nextVC, animated: true, completion: nil)
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -78,7 +83,7 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlace
         self.http?.get(fromUrl: self.url)
     }
     
-    func didReceiveData(data: Any) {
+    internal func didReceiveData(data: Any) {
         let dataArray = data as! [Dictionary<String, Any>]
         
         self.places = dataArray.map(){Place(withDict: $0)}
@@ -90,27 +95,29 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlace
         //self.updateUI()
     }
     
-    func updateUI() {
-        DispatchQueue.main.async {
-            var yCoords: Int = 200
-            for place in self.places {
-                yCoords += 30
-                let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-                label.center = CGPoint(x: 200, y: yCoords)
-                label.textAlignment = .center
-                label.text = place.name
-                self.view.addSubview(label)
-            }
-            
-//            self.hideLoadingScreen()
-        }
-    }
+//    func updateUI() {
+//        DispatchQueue.main.async {
+//            var yCoords: Int = 200
+//            for place in self.places {
+//                yCoords += 30
+//                let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+//                label.center = CGPoint(x: 200, y: yCoords)
+//                label.textAlignment = .center
+//                label.text = place.name
+//                self.view.addSubview(label)
+//            }
+//            
+////            self.hideLoadingScreen()
+//        }
+//    }
     
     func showDetails(of place: Place){
         let destination = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlaceDetailsView") as! PlaceDetailsViewController
         
         destination.name = place.name
         destination.imageUrl = place.imageUrl!
+        destination.info = place.info
+        destination.owner = place.owner
 //        }
         //self.navigationController?.pushViewController(destination, animated: true)
         self.show(destination, sender: self)
@@ -133,13 +140,24 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlace
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceTableViewCell", for: indexPath) as! PlaceTableViewCell
         cell.placeNameLabel?.text = self.places[indexPath.row].name
-        DispatchQueue.main.async {
-        if let url = NSURL(string: self.places[indexPath.row].imageUrl!) {
-            if let data = NSData(contentsOf: url as URL) {
-                cell.placeImageView?.image = UIImage(data: data as Data)
-            }        
+        if let url = URL(string: self.places[indexPath.row].imageUrl!){
+            
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url) {
+                    DispatchQueue.main.async {
+                        cell.placeImageView.image = UIImage(data: data)
+                    }
+                }
+            }
         }
-        }
+//        DispatchQueue.main.async {
+//        if let url = NSURL(string: self.places[indexPath.row].imageUrl!) {
+//            if let data = NSData(contentsOf: url as URL) {
+//            cell.placeImageView.contentMode = .scaleAspectFit
+//                cell.placeImageView?.image = UIImage(data: data as Data)
+//            }        
+//        }
+//        }
         cell.setNeedsLayout() //invalidate current layout
         cell.layoutIfNeeded() //update immediately
         
