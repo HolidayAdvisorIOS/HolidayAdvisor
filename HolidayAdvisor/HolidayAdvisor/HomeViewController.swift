@@ -16,7 +16,7 @@ class PlaceTableViewCell: UITableViewCell{
     @IBOutlet weak var placeImageView: UIImageView!
 }
 
-class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlaceModalDelegate {
+class HomeViewController: UITableViewController, HttpRequesterDelegate {
     
 
     var placeId: String?
@@ -69,13 +69,6 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlace
         // Dispose of any resources that can be recreated.
     }
     
-    func didCreatePlace(place: Place?) {
-        self.places.append(place!)
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
-    
     func loadPlaces () {
         self.http?.delegate = self
         //self.showLoadingScreen()
@@ -83,7 +76,7 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlace
         self.http?.get(fromUrl: self.url)
     }
     
-    internal func didReceiveData(data: Any) {
+    func didReceiveData(data: Any) {
         let dataArray = data as! [Dictionary<String, Any>]
         
         self.places = dataArray.map(){Place(withDict: $0)}
@@ -118,8 +111,7 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlace
         destination.imageUrl = place.imageUrl!
         destination.info = place.info
         destination.owner = place.owner
-//        }
-        //self.navigationController?.pushViewController(destination, animated: true)
+
         self.show(destination, sender: self)
     }
     

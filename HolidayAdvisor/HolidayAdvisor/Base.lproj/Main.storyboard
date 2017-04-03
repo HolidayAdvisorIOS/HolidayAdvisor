@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dR8-Xb-ifJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="54"/>
+            <point key="canvasLocation" x="1057" y="54"/>
         </scene>
         <!--Create Place View Controller-->
         <scene sceneID="vgQ-oF-NXR">
@@ -87,8 +87,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add new  place" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmB-SS-9Ol">
-                                <rect key="frame" x="104" y="71" width="196" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add new  place" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmB-SS-9Ol">
+                                <rect key="frame" x="104" y="71" width="196" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
@@ -168,11 +168,51 @@
                         <outlet property="placeImageUrlLabel" destination="9mb-8u-LAv" id="oN7-bz-WuW"/>
                         <outlet property="placeNameLabel" destination="Ocj-ga-HZl" id="WHq-NK-NJX"/>
                         <outlet property="placeOwnerLabel" destination="fxN-Js-Mnj" id="T1h-NK-04b"/>
+                        <segue destination="7g5-el-Lbn" kind="presentation" identifier="success" modalTransitionStyle="partialCurl" id="wYI-bS-SP5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXN-GS-B35" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2616.8000000000002" y="57.121439280359823"/>
+            <point key="canvasLocation" x="-1420" y="768"/>
+        </scene>
+        <!--Success Created View Controller-->
+        <scene sceneID="dLp-dy-vM8">
+            <objects>
+                <viewController storyboardIdentifier="SuccessCreatedView" id="7g5-el-Lbn" customClass="SuccessCreatedViewController" customModule="HolidayAdvisor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gPJ-2Q-gfA"/>
+                        <viewControllerLayoutGuide type="bottom" id="YA1-lo-V8p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="SuccessCreatedView" id="7gy-Pc-VpI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqc-SK-j8p">
+                                <rect key="frame" x="16" y="167" width="343" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3v-dQ-KSY">
+                                <rect key="frame" x="123" y="333" width="153" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.3534552071" green="1" blue="0.29352794250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="All places"/>
+                                <connections>
+                                    <segue destination="B4a-SK-HdU" kind="show" id="gjY-wZ-xe1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.09495418518781662" green="0.5908387303352356" blue="0.58859843015670776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="placeNameLabel" destination="cqc-SK-j8p" id="sCW-DX-5lF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9l-yA-WP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-564" y="768"/>
         </scene>
         <!--Item-->
         <scene sceneID="9Rc-dA-tvr">
@@ -184,7 +224,7 @@
                         <color key="backgroundColor" red="0.09495418518781662" green="0.5908387303352356" blue="0.58859843015670776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceTableViewCell" rowHeight="99" id="ht2-Zp-o8U" customClass="PlaceTableViewCell" customModule="HolidayAdvisor">
-                                <rect key="frame" x="0.0" y="56" width="375" height="99"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ht2-Zp-o8U" id="bf8-IL-r7I">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
@@ -196,21 +236,20 @@
                                                 <constraint firstAttribute="width" constant="125" id="AGp-5M-bAX"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foO-YI-dEd">
-                                            <rect key="frame" x="10" y="8" width="232" height="82.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foO-YI-dEd">
+                                            <rect key="frame" x="18" y="8" width="232" height="83"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="RXd-tB-B3s" secondAttribute="bottom" id="0xl-qv-fxZ"/>
                                         <constraint firstItem="foO-YI-dEd" firstAttribute="leading" secondItem="bf8-IL-r7I" secondAttribute="leadingMargin" constant="10" id="CFy-pa-ah1"/>
                                         <constraint firstItem="foO-YI-dEd" firstAttribute="centerY" secondItem="bf8-IL-r7I" secondAttribute="centerY" id="OlJ-j2-Mw8"/>
                                         <constraint firstItem="foO-YI-dEd" firstAttribute="top" secondItem="bf8-IL-r7I" secondAttribute="topMargin" id="SGX-z1-UEd"/>
                                         <constraint firstItem="RXd-tB-B3s" firstAttribute="leading" secondItem="foO-YI-dEd" secondAttribute="trailing" id="WfF-KE-OK2"/>
+                                        <constraint firstItem="RXd-tB-B3s" firstAttribute="centerY" secondItem="foO-YI-dEd" secondAttribute="centerY" id="cgs-OM-Fi5"/>
                                         <constraint firstAttribute="trailing" secondItem="RXd-tB-B3s" secondAttribute="trailing" id="hlI-gW-tbR"/>
-                                        <constraint firstAttribute="bottom" secondItem="RXd-tB-B3s" secondAttribute="bottom" id="i8s-X2-oCH"/>
                                         <constraint firstItem="RXd-tB-B3s" firstAttribute="leading" secondItem="foO-YI-dEd" secondAttribute="trailing" id="l39-MW-8f3"/>
                                         <constraint firstItem="RXd-tB-B3s" firstAttribute="top" secondItem="bf8-IL-r7I" secondAttribute="top" id="uIE-at-AWE"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="foO-YI-dEd" secondAttribute="bottom" id="wqr-jo-J5j"/>
@@ -228,7 +267,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdf-s1-3Z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650" y="54"/>
+            <point key="canvasLocation" x="263" y="54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VWg-ab-ybR">
@@ -282,10 +321,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lu5-6s-PnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="54"/>
+            <point key="canvasLocation" x="-564" y="54"/>
         </scene>
     </scenes>
     <resources>
         <image name="holidayLogo" width="320" height="185"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gjY-wZ-xe1"/>
+    </inferredMetricsTieBreakers>
 </document>

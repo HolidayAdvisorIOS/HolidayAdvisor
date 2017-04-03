@@ -51,7 +51,6 @@ class CreatePlaceViewController: UIViewController, HttpRequesterDelegate {
         var description: String = self.placeDescriptionLabel.text!
         var imageUrl: String = self.placeImageUrlLabel.text!
         var owner: String = self.placeOwnerLabel.text!
-        self.http?.delegate? = self
         
         func placeToCreate() -> Dictionary<String, Any> {
             return[
@@ -64,19 +63,29 @@ class CreatePlaceViewController: UIViewController, HttpRequesterDelegate {
                 "lng":0]
         }
         
-       self.http?.postJson(toUrl: self.url, withBody: placeToCreate())
+        self.http?.delegate? = self
+        
+        self.http?.postJson(toUrl: self.url, withBody: placeToCreate())
+        
+        
+        let destination = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SuccessCreatedView") as! SuccessCreatedViewController
+
+        destination.name = name
+        destination.owner = owner
+        
+        self.show(destination, sender: self)
+
     }
     
     func didReceiveData(data: Any) {
         let dataObj = data as! Dictionary<String, Any>
         
-        self.name = dataObj["name"] as! String
-        self.imageUrl = dataObj["img"] as! String
-        self.info = dataObj["info"] as! String
-        self.owner = dataObj["owner"] as! String
-        self.rating = dataObj["rating"] as! Int
-
-        print(String(describing: self.name))
+        self.name = dataObj["name"] as? String
+        self.imageUrl = dataObj["img"] as? String
+        self.info = dataObj["info"] as? String
+        self.owner = dataObj["owner"] as? String
+        self.rating = dataObj["rating"] as? Int
+        
     }
     
 //    owner: this.userService.getCurrentUser().username,
@@ -87,7 +96,7 @@ class CreatePlaceViewController: UIViewController, HttpRequesterDelegate {
 //    lat: 0,
 //    lng :0
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -95,6 +104,6 @@ class CreatePlaceViewController: UIViewController, HttpRequesterDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }
