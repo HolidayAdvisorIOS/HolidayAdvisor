@@ -39,7 +39,7 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlace
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "place-cell")
+        //self.tableView.register(PlaceTableViewCell.self, forCellReuseIdentifier: "PlaceTableViewCell")
         
         self.navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .add,
@@ -106,12 +106,15 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlace
         }
     }
     
-//    func showDetails(of place: Place){
-//        let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "book-details") as! BookDetailsViewController
-//        nextVC.bookId = book.id
-//        
-//        self.navigationController?.show(nextVC, sender: self)
-//    }
+    func showDetails(of place: Place){
+        let destination = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlaceDetailsView") as! PlaceDetailsViewController
+        
+        destination.name = place.name
+        destination.imageUrl = place.imageUrl!
+//        }
+        //self.navigationController?.pushViewController(destination, animated: true)
+        self.show(destination, sender: self)
+    }
     
     // MARK: - Table view data source
     
@@ -123,36 +126,45 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate, AddPlace
         return self.places.count
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "All places you should visit"
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceTableViewCell", for: indexPath) as! PlaceTableViewCell
         cell.placeNameLabel?.text = self.places[indexPath.row].name
+        DispatchQueue.main.async {
         if let url = NSURL(string: self.places[indexPath.row].imageUrl!) {
             if let data = NSData(contentsOf: url as URL) {
                 cell.placeImageView?.image = UIImage(data: data as Data)
             }        
         }
+        }
+        cell.setNeedsLayout() //invalidate current layout
+        cell.layoutIfNeeded() //update immediately
         
         return cell
     }
     
     // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
+//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        // Return false if you do not want the specified item to be editable.
+//        return true
+//    }
     
-    // Override to support editing the table view.
+//     //Override to support editing the table view.
 //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == .delete {
-//            self.deleteBookAt(index: indexPath.row)
+//            self.deletePlaceAt(index: indexPath.row)
 //        } else if editingStyle == .insert {
 //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
 //        }
 //    }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.showDetails(of: self.places[indexPath.row])
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.showDetails(of: self.places[indexPath.row])
+        
+    }
 
 }
 
