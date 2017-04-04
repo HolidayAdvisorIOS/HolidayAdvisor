@@ -17,6 +17,10 @@ class StartViewController : UIViewController {
         
     }
     
+    @IBAction func travellersButtonClick(_ sender: Any) {
+        
+    }
+    
     @IBAction func placesButtonClick(_ sender: Any) {
         
     }

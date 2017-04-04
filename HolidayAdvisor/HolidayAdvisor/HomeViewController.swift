@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class PlaceTableViewCell: UITableViewCell{
     
@@ -18,6 +17,7 @@ class PlaceTableViewCell: UITableViewCell{
 
 class HomeViewController: UITableViewController, HttpRequesterDelegate {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var places: [Place] = []
     var animator: UIDynamicAnimator?
@@ -63,17 +63,6 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate {
     self.show(destination, sender: self)
     }
     
-//    func showAddModal(){
-//        let nextVC = UIStoryboard(name: "Main", bundle: nil)
-//            .instantiateViewController(withIdentifier: "modal-add-place") as! AddPlaceModalViewController
-//        
-//        nextVC.delegate = self
-//        
-////        self.customPresentViewController(self.presenter, viewController: nextVC, animated: true, completion: nil)
-//        
-//        // self.present(nextVC, animated: true, completion: nil)
-//    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -92,7 +81,7 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-        //self.updateUI()
+        self.activityIndicator.isHidden = true
     }
     
 //    func updateUI() {
@@ -150,8 +139,7 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate {
             }
         }
         
-        cell.setNeedsLayout() //invalidate current layout
-        cell.layoutIfNeeded() //update immediately
+      
 //        self.gravity?.addItem(cell)
 //        self.collision?.addItem(cell)
         return cell

@@ -8,17 +8,60 @@
 
 import UIKit
 
-class UserListTableViewController: UITableViewController {
+class UserTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var age: UILabel!
+    @IBOutlet weak var gender: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
+}
+
+class UserListTableViewController: UITableViewController, HttpRequesterDelegate {
+
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var users: [User] = []
+    
+    var url: String {
+        get{
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            return "\(appDelegate.baseUrl)/users"
+        }
+    }
+    
+    var http: HttpRequester? {
+        get{
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            return appDelegate.http
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.loadUsers()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    func loadUsers () {
+        self.http?.delegate = self
+        
+        self.http?.get(fromUrl: self.url)
+    }
+
+    func didReceiveData(data: Any) {
+        let dataArray = data as! [Dictionary<String, Any>]
+        
+        self.users = dataArray.map(){User(withDict: $0)}
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        self.activityIndicator.isHidden = true
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,13 +72,36 @@ class UserListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.users.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserTableViewCell
+        cell.userName?.text = self.users[indexPath.row].userName
+        cell.gender?.text = self.users[indexPath.row].gender
+        cell.age?.text = "\(self.users[indexPath.row].age ?? 0)"
+        if let url = URL(string: self.users[indexPath.row].image!){
+            
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url) {
+                    DispatchQueue.main.async {
+                        cell.userImage.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        
+        cell.setNeedsLayout() //invalidate current layout
+        cell.layoutIfNeeded() //update immediately
+        
+        return cell
+    }
+
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

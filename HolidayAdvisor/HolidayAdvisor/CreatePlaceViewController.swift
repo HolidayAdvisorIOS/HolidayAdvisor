@@ -88,15 +88,6 @@ class CreatePlaceViewController: UIViewController, HttpRequesterDelegate {
         
     }
     
-//    owner: this.userService.getCurrentUser().username,
-//    info:'',
-//    img: '',
-//    name: '',
-//    rating: 1,
-//    lat: 0,
-//    lng :0
-
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
