@@ -21,6 +21,9 @@ class UserListTableViewController: UITableViewController, HttpRequesterDelegate 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var users: [User] = []
+    var animator: UIDynamicAnimator?
+    var gravity: UIGravityBehavior?
+    var collision: UICollisionBehavior?
     
     var url: String {
         get{
@@ -39,10 +42,21 @@ class UserListTableViewController: UITableViewController, HttpRequesterDelegate 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.gravity = UIGravityBehavior()
+        self.gravity?.magnitude = 0.2
+        self.collision = UICollisionBehavior()
+        self.collision?.translatesReferenceBoundsIntoBoundary = true
+        
+        self.animator = UIDynamicAnimator(referenceView: self.view)
+        
+        self.animator?.addBehavior(self.gravity!)
+        self.animator?.addBehavior(self.collision!)
+        
+        //let obstacle = UIView(frame: CGRect(x: 50, y : self.view.bounds.height - 100, width: self.view.bounds.width, height: 10))
+        
+        self.collision?.addBoundary(withIdentifier: "obstacle" as NSCopying, from: CGPoint(x:50, y:self.view.bounds.height - 100), to: CGPoint(x: self.view.bounds.width - 50, y: self.view.bounds.height - 100))
         self.loadUsers()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
     }
     
     func loadUsers () {
@@ -65,18 +79,15 @@ class UserListTableViewController: UITableViewController, HttpRequesterDelegate 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return self.users.count
     }
     
@@ -96,8 +107,8 @@ class UserListTableViewController: UITableViewController, HttpRequesterDelegate 
             }
         }
         
-        cell.setNeedsLayout() //invalidate current layout
-        cell.layoutIfNeeded() //update immediately
+        self.gravity?.addItem(cell)
+        self.collision?.addItem(cell)
         
         return cell
     }
