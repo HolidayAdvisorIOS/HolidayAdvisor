@@ -37,7 +37,7 @@
                                 <rect key="frame" x="97" y="353" width="81" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlb-oF-pcg">
@@ -51,11 +51,11 @@
                                 <rect key="frame" x="97" y="391" width="93" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="info" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOf-bS-Xdb">
-                                <rect key="frame" x="97" y="420" width="240" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="info" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOf-bS-Xdb">
+                                <rect key="frame" x="97" y="420" width="240" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dR8-Xb-ifJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="54"/>
+            <point key="canvasLocation" x="1056.8" y="53.523238380809602"/>
         </scene>
         <!--Create Place View Controller-->
         <scene sceneID="vgQ-oF-NXR">
@@ -168,7 +168,7 @@
                         <outlet property="placeImageUrlLabel" destination="9mb-8u-LAv" id="oN7-bz-WuW"/>
                         <outlet property="placeNameLabel" destination="Ocj-ga-HZl" id="WHq-NK-NJX"/>
                         <outlet property="placeOwnerLabel" destination="fxN-Js-Mnj" id="T1h-NK-04b"/>
-                        <segue destination="7g5-el-Lbn" kind="presentation" identifier="success" modalTransitionStyle="partialCurl" id="wYI-bS-SP5"/>
+                        <segue destination="7g5-el-Lbn" kind="presentation" identifier="success" modalTransitionStyle="crossDissolve" id="wYI-bS-SP5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXN-GS-B35" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -218,7 +218,7 @@
         <scene sceneID="9Rc-dA-tvr">
             <objects>
                 <tableViewController id="B4a-SK-HdU" customClass="HomeViewController" customModule="HolidayAdvisor" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="99" sectionHeaderHeight="18" sectionFooterHeight="18" id="N6S-0A-quz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="99" sectionHeaderHeight="18" sectionFooterHeight="18" id="N6S-0A-quz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.09495418518781662" green="0.5908387303352356" blue="0.58859843015670776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -11,6 +11,9 @@
 		3D433D9C1E90D74D00992715 /* HttpRequesterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D433D9B1E90D74D00992715 /* HttpRequesterDelegate.swift */; };
 		3D433D9F1E90DAB600992715 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D433D9E1E90DAB600992715 /* Place.swift */; };
 		3D433DA11E90DD0D00992715 /* DictPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D433DA01E90DD0D00992715 /* DictPlace.swift */; };
+		3D8D85271E938C8700153431 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8D85261E938C8700153431 /* User.swift */; };
+		3D8D85291E938E9A00153431 /* DictUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8D85281E938E9A00153431 /* DictUser.swift */; };
+		3D8D852B1E9390CE00153431 /* UserListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8D852A1E9390CE00153431 /* UserListTableViewController.swift */; };
 		3DB2F2391E8FE9430047D458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2F2381E8FE9430047D458 /* AppDelegate.swift */; };
 		3DB2F23B1E8FE9430047D458 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2F23A1E8FE9430047D458 /* HomeViewController.swift */; };
 		3DB2F23E1E8FE9430047D458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB2F23C1E8FE9430047D458 /* Main.storyboard */; };
@@ -29,6 +32,9 @@
 		3D433D9B1E90D74D00992715 /* HttpRequesterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequesterDelegate.swift; sourceTree = "<group>"; };
 		3D433D9E1E90DAB600992715 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		3D433DA01E90DD0D00992715 /* DictPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictPlace.swift; sourceTree = "<group>"; };
+		3D8D85261E938C8700153431 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3D8D85281E938E9A00153431 /* DictUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictUser.swift; sourceTree = "<group>"; };
+		3D8D852A1E9390CE00153431 /* UserListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewController.swift; sourceTree = "<group>"; };
 		3DB2F2351E8FE9430047D458 /* HolidayAdvisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayAdvisor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB2F2381E8FE9430047D458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DB2F23A1E8FE9430047D458 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,8 @@
 			children = (
 				3D433D9E1E90DAB600992715 /* Place.swift */,
 				3D433DA01E90DD0D00992715 /* DictPlace.swift */,
+				3D8D85261E938C8700153431 /* User.swift */,
+				3D8D85281E938E9A00153431 /* DictUser.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 				3DBF22F01E923FA8008795D0 /* PlaceDetailsViewController.swift */,
 				3DBF22F21E927849008795D0 /* CreatePlaceViewController.swift */,
 				3DBF22F41E92CAF1008795D0 /* SuccessCreatedViewController.swift */,
+				3D8D852A1E9390CE00153431 /* UserListTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -275,9 +284,12 @@
 				3D433D9C1E90D74D00992715 /* HttpRequesterDelegate.swift in Sources */,
 				3D433D9A1E90D70100992715 /* HttpRequester.swift in Sources */,
 				3DBF22F31E927849008795D0 /* CreatePlaceViewController.swift in Sources */,
+				3D8D85291E938E9A00153431 /* DictUser.swift in Sources */,
 				3DBF22EB1E90E790008795D0 /* AddPlaceModalViewController.swift in Sources */,
 				3D433DA11E90DD0D00992715 /* DictPlace.swift in Sources */,
 				3DBF22F11E923FA8008795D0 /* PlaceDetailsViewController.swift in Sources */,
+				3D8D85271E938C8700153431 /* User.swift in Sources */,
+				3D8D852B1E9390CE00153431 /* UserListTableViewController.swift in Sources */,
 				3DBF22F51E92CAF1008795D0 /* SuccessCreatedViewController.swift in Sources */,
 				3DB2F2391E8FE9430047D458 /* AppDelegate.swift in Sources */,
 				3D433D9F1E90DAB600992715 /* Place.swift in Sources */,

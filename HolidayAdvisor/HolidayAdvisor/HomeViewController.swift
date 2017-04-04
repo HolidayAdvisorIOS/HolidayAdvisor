@@ -19,8 +19,10 @@ class PlaceTableViewCell: UITableViewCell{
 class HomeViewController: UITableViewController, HttpRequesterDelegate {
     
 
-    var placeId: String?
     var places: [Place] = []
+    var animator: UIDynamicAnimator?
+    var gravity: UIGravityBehavior?
+    var collision: UICollisionBehavior?
     
     var url: String {
         get{
@@ -40,6 +42,14 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate {
         super.viewDidLoad()
         
         //self.tableView.register(PlaceTableViewCell.self, forCellReuseIdentifier: "PlaceTableViewCell")
+        self.gravity = UIGravityBehavior()
+        self.collision = UICollisionBehavior()
+        self.collision?.translatesReferenceBoundsIntoBoundary = true
+        
+        self.animator = UIDynamicAnimator(referenceView: self.view)
+
+        self.animator?.addBehavior(self.gravity!)
+        self.animator?.addBehavior(self.collision!)
         
         self.navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .add,
@@ -66,12 +76,10 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func loadPlaces () {
         self.http?.delegate = self
-        //self.showLoadingScreen()
         
         self.http?.get(fromUrl: self.url)
     }
@@ -83,7 +91,6 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate {
         
         DispatchQueue.main.async {
             self.tableView.reloadData()
-            //self.hideLoadingScreen()
         }
         //self.updateUI()
     }
@@ -100,7 +107,7 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate {
 //                self.view.addSubview(label)
 //            }
 //            
-////            self.hideLoadingScreen()
+////
 //        }
 //    }
     
@@ -142,38 +149,16 @@ class HomeViewController: UITableViewController, HttpRequesterDelegate {
                 }
             }
         }
-//        DispatchQueue.main.async {
-//        if let url = NSURL(string: self.places[indexPath.row].imageUrl!) {
-//            if let data = NSData(contentsOf: url as URL) {
-//            cell.placeImageView.contentMode = .scaleAspectFit
-//                cell.placeImageView?.image = UIImage(data: data as Data)
-//            }        
-//        }
-//        }
+        
         cell.setNeedsLayout() //invalidate current layout
         cell.layoutIfNeeded() //update immediately
-        
+//        self.gravity?.addItem(cell)
+//        self.collision?.addItem(cell)
         return cell
     }
     
-    // Override to support conditional editing of the table view.
-//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        // Return false if you do not want the specified item to be editable.
-//        return true
-//    }
-    
-//     //Override to support editing the table view.
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            self.deletePlaceAt(index: indexPath.row)
-//        } else if editingStyle == .insert {
-//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//        }
-//    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.showDetails(of: self.places[indexPath.row])
-        
     }
 
 }
