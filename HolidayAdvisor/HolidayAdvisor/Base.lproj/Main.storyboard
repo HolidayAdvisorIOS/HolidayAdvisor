@@ -222,9 +222,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.09495418518781662" green="0.5908387303352356" blue="0.58859843015670776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" id="SNA-at-8v8">
+                            <rect key="frame" x="0.0" y="172.5" width="375" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceTableViewCell" rowHeight="99" id="ht2-Zp-o8U" customClass="PlaceTableViewCell" customModule="HolidayAdvisor">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="99"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ht2-Zp-o8U" id="bf8-IL-r7I">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
