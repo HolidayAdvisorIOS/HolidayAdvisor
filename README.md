@@ -27,3 +27,9 @@ This project is an iOS application which provides you with information about tra
  - Check up all posted places live from remote server
  - Check up all registered user live from remote server
  - Add new place live to remote server
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+![Initial](./ScreenShots/ScreenShotOne.jpg)
+![Initial](./ScreenShots/ScreenShotTwo.jpg)
+![Initial](./ScreenShots/ScreenShotThree.jpg)
