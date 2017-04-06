@@ -33,3 +33,5 @@ This project is an iOS application which provides you with information about tra
 ![Initial](./ScreenShots/ScreenShotOne.jpg)
 ![Initial](./ScreenShots/ScreenShotTwo.jpg)
 ![Initial](./ScreenShots/ScreenShotThree.jpg)
+![Initial](./ScreenShots/iOS4.jpg)
+![Initial](./ScreenShots/iOS5.jpg)
